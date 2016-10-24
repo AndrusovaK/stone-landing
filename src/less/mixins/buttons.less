@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------------
+//  Общие стиля любой кнопки
+//------------------------------------------------------------------------------
+
+
+.btn {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 700;
+  padding: @btn-padding;
+  font-size: @font-size--medium;
+  line-height: @btn-line-height;
+  background-color: transparent;
+  color: @color__white;
+  border: 1px solid @color__gold;
+  border-radius: 2rem ~"/" 2rem;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  // &--hover,
+  &:hover {
+    color: @color__white;
+    background: @color__gold;
+  }
+
+  &:active {
+    background: @color__gold;
+  }
+}
+
+
+
+//------------------------------------------------------------------------------
+//  Примесь-генератор цветовых стилей
+//------------------------------------------------------------------------------
+
+
+.btn-color-variant(@color: @color__pink; @background: @color__white) {
+  color: @color;
+  background-color: @background;
+  &:hover {
+    color: @color;
+    background-color: @background;
+  }
+}

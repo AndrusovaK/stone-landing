@@ -1,0 +1,23 @@
+.media-sm(@rules) {
+	@media (min-width: @screen-sm) {
+		@rules();
+	};
+};
+
+.media-tablet(@rules) {
+	@media (min-width: @screen-md) {
+		@rules();
+	};
+};
+
+.media-full(@rules) {
+	@media (min-width: @screen-xl) {
+		@rules();
+	};
+};
+
+.media-lg(@rules) {
+	@media (min-width: @screen-lg) {
+		@rules();
+	};
+};

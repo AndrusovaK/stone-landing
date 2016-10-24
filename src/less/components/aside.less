@@ -1,0 +1,43 @@
+.aside {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	font-size: @font-size;
+
+	&__nav {
+		height: 70%;
+		padding: 0 2.5rem;
+		background: rgba(0, 0 , 0, 0.6);
+	}
+
+	&__contacts {
+		height: 30%;
+		padding: 0 2.5rem;
+		background-color: rgba(30, 30, 30, 0.9);
+	}
+}
+
+.main-nav {
+	&__list {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	li {
+		transition: all 0.3s;
+	}
+
+	li.active {
+		.main-nav__link {
+			color: @color__gold;
+			text-decoration: underline;
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		line-height: 2rem;
+	}
+}
