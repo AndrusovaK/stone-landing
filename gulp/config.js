@@ -15,7 +15,7 @@ module.exports = {
                 CSSVendor: 'src/less/vendor/',
                 Txt: ['src/humans.txt', 'src/robots.txt', 'src/.htaccess','src/CHANGELOG.md','src/README.md'],
                 Php: 'src/*.php',
-                Fonts: 'src/fonts/**/*',
+                Fonts: 'src/less/fonts/**/*',
                 Svg: ['src/svg/**/*.*'],
                 // SvgSprite: 'src/svg/sprite/**/*.svg',
                 // SvgSpriteTpl: 'src/less/components/_svg-sprite-less.tpl'
@@ -31,9 +31,9 @@ module.exports = {
                 Txt: 'dist/',
                 Php: 'dist/',
                 Clean: ['dist/**/*', '!dist/.gitignore'],
-                Fonts: 'dist/fonts',
+                Fonts: 'dist/css/fonts',
                 Svg: 'dist/svg',
-                CSSVendor: 'dist/css/vendor',
+                CSSVendor: 'dist/css/vendor'
                 // SvgSprite: 'dist/svg',
                 // SvgSpriteNoSvg: 'dist/svg/sprite/svg-sprite.png',
                 // SvgSpriteCSS: 'src/less/includes/_svg-sprite.less'

@@ -4,5 +4,5 @@ var gulp = require('gulp'),
 gulp.task('html', function() {
   console.log('---------- копирование html');
   return gulp.src('src/*.html')
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest(config.pathTo.Build.Html));
 });

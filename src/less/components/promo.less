@@ -1,0 +1,32 @@
+.section {
+	background-size: cover;
+}
+
+.promo {
+	background-image: url(../img/bg_top.jpg);
+
+	&__text {
+		max-width: 24em;
+		color: @color__white;
+		font-size: @font-size--large;
+		margin-bottom: 1.2em;
+	}
+
+	&__form-info {
+		font-size: @font-size--medium;
+		color: @color__gold;
+		max-width: 22em;
+		font-weight: 300;
+		line-height: 1.6em;
+		margin-bottom: 2.4em;
+		.media-full({
+			font-size: @font-size--small;
+		});
+	}
+}
+
+.title {
+	.h1();
+	color: @color__white;
+	max-width: 10em;
+}

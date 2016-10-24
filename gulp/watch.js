@@ -9,5 +9,5 @@ gulp.task('watch', ['webserver'],function() {
     gulp.watch('bower.json', ['bower']);
     //gulp.watch(config.pathTo.Src.Txt, ['txt']);
     gulp.watch(config.pathTo.Src.JS, ['js']);
-    //gulp.watch(config.pathTo.Src.Fonts, ['fonts']);
+    gulp.watch(config.pathTo.Src.Fonts, ['fonts']);
 });

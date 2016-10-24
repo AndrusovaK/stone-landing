@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Title</title>
 	<link rel="stylesheet" href="css/vendor/slick.css">
 	<link rel="stylesheet" href="css/vendor/magnific-popup.css">
@@ -14,6 +15,8 @@
 		<div class="logo"></div>
 		<nav class="main-nav">
 			<ul class="main-nav__list" id="nav">
+				<li data-menuanchor="top" class="active"
+				    style="display: none;"><a class="main-nav__link" href="#top">топ</a></li>
 				<li data-menuanchor="products"><a class="main-nav__link" href="#products">Изделия</a></li>
 				<li data-menuanchor="projects"><a class="main-nav__link" href="#projects">Примеры работ</a></li>
 				<li data-menuanchor="rok"><a class="main-nav__link" href="#rok">РОК</a></li>
@@ -24,19 +27,35 @@
 		</nav>
 	</div>
 	<div class="aside__contacts">
-		<div href="" class="phone"></div>
-		<div href="" class="phone"></div>
-		<a href="" class="btn btn--transparent">Перезвоните мне</a>
+		<div class="aside__contacts-inner">
+			<div class="phone">+7 (812) <span>425 39 00</span></div>
+			<div class="phone">+7 (812) <span>425 39 00</span></div>
+			<a href="" class="btn btn--transparent btn--callback">Перезвоните мне</a>
+		</div>
 	</div>
 </div>
 
 <div id="fullpage">
-	<div class="section">Some section 1</div>
+	<div class="section promo">
+		<div class="container">
+			<h1 class="title">Разработка эскиза в подарок</h1>
+			<p class="promo__text">при заключении договора на изготовление
+				художественных изделий из натурального камня</p>
+			<p class="promo__form-info">Оставьте Ваш телефон, наш менеджер свяжется с
+				Вами для уточнения деталей проекта</p>
+
+			<form action="">
+				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="submit" class="btn--square" value="Отправить">
+			</form>
+		</div>
+	</div>
 	<div class="section">Some section 2</div>
 	<div class="section">Some section 3</div>
 	<div class="section">Some section 4</div>
 	<div class="section">Some section 5</div>
 	<div class="section">Some section 6</div>
+	<div class="section">Some section 7</div>
 </div>
 
 

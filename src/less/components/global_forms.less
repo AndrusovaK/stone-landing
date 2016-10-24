@@ -27,35 +27,39 @@ textarea {
 //  БЭМ-блок поля формы
 //------------------------------------------------------------------------------
 
-.field {
-  margin-bottom: @type-spacer;
-  width: 100%;
+.input-text {
+  display: block;
+  width: 24rem;
+  padding: @field-padding;
+  font-size: @font-size--medium;
+  line-height: @field-line-height;
+  color: @color__white;
+  background-image: none;
+  background-color: transparent;
+  border: @field-border;
+  border-radius: @border-radius;
+  font-weight: 300;
+  margin-bottom: 3.2rem;
 
-  // Использование с классами модульной сетки
-  // &:not(.row) {
-    display: block;
-  // }
-
-  // Название поля
-  &__label {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 1rem;
-
-    // Использование с классами модульной сетки
-    // .row > & {
-    //   margin-bottom: 0;
-    //   height: @field-height;
-    //   line-height: @field-height;
-    // }
+  &::placeholder {
+    color: @color__white;
+    font-weight: 300;
+    opacity: 1;
   }
 
+  &:focus {
+    outline: none;
+  }
+
+  .media-full({ font-size: @font-size--small; width: 20rem;})
+}
+
+/*.field {
+  margin-bottom: 2.4em;
+
   // Текстовые поля и селект (общие свойства)
-  &__input-text,
-  &__select,
-  &__textarea {
+  &__input-text {
     display: block;
-    width: 100%;
     padding: @field-padding;
     font-size: @font-size;
     line-height: @field-line-height;
@@ -66,28 +70,28 @@ textarea {
     border-radius: @border-radius;
 
     &::placeholder {
-      color: @color__gray-light;
+      color: @color__white;
       opacity: 1;
-    }
+    }*/
 
     // &:focus {
     //   .focus();
     // }
 
-    &:disabled,
+   /* &:disabled,
     &[readonly] {
       background-color: @color__gray-lightest;
       opacity: 1;
-    }
+    }*/
 
-    &:disabled {
+   /* &:disabled {
       cursor: not-allowed;
       opacity: @opacity;
-    }
-  }
+    }*/
+  //}
 
   // Текстовые поля и селект (фиксируем высоту тем, кому нужно)
-  &__input-text {
+ /* &__input-text {
     height: @field-height;
   }
   &__select {
@@ -95,10 +99,10 @@ textarea {
     &:not([multiple]) {
       height: @field-height;
     }
-  }
+  }*/
 
   // Селект
-  &__select {
+  /*&__select {
     appearance: none;
     background-image: data-uri('image/svg+xml;charset=UTF-8', '../../img/icons_form/chevron-down.svg');
     background-size: 1.5rem 1.5rem;
@@ -109,31 +113,27 @@ textarea {
     &::-ms-expand {
       display: none;
     }
-  }
+  }*/
 
   // Файл
-  &__file {
+  /*&__file {
     display: block;
     width: 100%;
 
     // &:focus {
     //   .focus();
     // }
-  }
+  }*/
 
-  // Файл: накладка для стилизации
-  &__file-pad {
-
-  }
 
   // Описание под полем
-  &__description {
+  /*&__description {
     display: block;
     font-size: @font-size--small;
     color: @color__gray-light;
     margin: 0;
     padding: .5rem 0 0;
-  }
+  }*/
 
   // Блоки рядом с текстовым полем
   // &__internal-group {
@@ -177,7 +177,7 @@ textarea {
 
 
   // Модификатор для радиокнопок
-  &--radio {
+  /*&--radio {
 
     & + & {
       margin-top: (@type-spacer * -.5);
@@ -188,10 +188,10 @@ textarea {
     .field__label {
       margin-bottom: 0;
     }
-  }
+  }*/
 
   // Модификатор для чекбоксов
-  &--checkbox {
+  /*&--checkbox {
     position: relative;
 
     & + & {
@@ -203,7 +203,7 @@ textarea {
     .field__label {
       margin-bottom: 0;
     }
-  }
+  }*/
 
   // Модификатор для радиокнопок (дополнение): своя радиокнопка
   // &--radio {
@@ -326,7 +326,7 @@ textarea {
   //   }
   // }
 
-}
+//}
 
 
 

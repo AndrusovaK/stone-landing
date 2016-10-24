@@ -13,9 +13,21 @@
 	}
 
 	&__contacts {
+		display: table;
 		height: 30%;
 		padding: 0 2.5rem;
+		text-align: center;
 		background-color: rgba(30, 30, 30, 0.9);
+
+		&-inner {
+			display: table-cell;
+			vertical-align: middle;
+			top: 50%;
+		}
+
+		.btn--callback {
+			margin-top: 2rem;
+		}
 	}
 }
 
@@ -38,6 +50,16 @@
 	}
 
 	&__link {
-		line-height: 2rem;
+		line-height: 2em;
+	}
+}
+
+.phone {
+	font-size: @font-size--medium;
+	color: @color__white;
+	line-height: 2em;
+
+	span {
+		font-size: @font-size;
 	}
 }
