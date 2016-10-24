@@ -28,7 +28,7 @@ textarea {
 //------------------------------------------------------------------------------
 
 .input-text {
-  display: block;
+  display: inline-block;
   width: 24rem;
   padding: @field-padding;
   font-size: @font-size--medium;
@@ -40,6 +40,7 @@ textarea {
   border-radius: @border-radius;
   font-weight: 300;
   margin-bottom: 3.2rem;
+  margin-right: 1.4rem;
 
   &::placeholder {
     color: @color__white;
@@ -51,8 +52,14 @@ textarea {
     outline: none;
   }
 
-  .media-full({ font-size: @font-size--small; width: 20rem;})
+  .media-full({ font-size: @font-size--small; width: 20rem;});
+
+  &--block {
+    display: block;
+  }
+
 }
+
 
 /*.field {
   margin-bottom: 2.4em;

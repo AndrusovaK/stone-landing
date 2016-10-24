@@ -6,6 +6,7 @@
 	<title>Title</title>
 	<link rel="stylesheet" href="css/vendor/slick.css">
 	<link rel="stylesheet" href="css/vendor/magnific-popup.css">
+	<link rel="stylesheet" href="css/vendor/jquery.fullpage.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -36,30 +37,176 @@
 </div>
 
 <div id="fullpage">
-	<div class="section promo">
+	<div class="section promo promo--sketch">
 		<div class="container">
-			<h1 class="title">Разработка эскиза в подарок</h1>
-			<p class="promo__text">при заключении договора на изготовление
+			<h1 class="title">Разработка эскиза <br>в подарок</h1>
+			<p class="promo__text">при заключении договора на изготовление <br>
 				художественных изделий из натурального камня</p>
-			<p class="promo__form-info">Оставьте Ваш телефон, наш менеджер свяжется с
-				Вами для уточнения деталей проекта</p>
+			<p class="promo__form-info">Оставьте Ваш телефон, наш менеджер свяжется <br>
+				с Вами для уточнения деталей проекта</p>
 
 			<form action="">
-				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="text" class="input-text input-text--block" placeholder="Ваш номер телефона">
 				<input type="submit" class="btn--square" value="Отправить">
 			</form>
 		</div>
 	</div>
-	<div class="section">Some section 2</div>
-	<div class="section">Some section 3</div>
+
+	<div class="section products">
+		<div class="container container--smallpadding">
+			<h1 class="title title--dark title--small">Изделия</h1>
+			<div class="container__inner">
+				<div class="row">
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product1.jpg"  alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Мозайка</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product2.jpg"  alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Камины</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product3.jpg"  alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Отделка интерьеров</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product4.jpg"  alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Лестницы</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product5.jpg" alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Элементы интерьера</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product6.jpg" alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Световые панно</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product7.jpg" alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Декоративные изделия из металла</span>
+					</div>
+					<div class="col-3">
+						<a href="" class="products__image">
+							<img src="img/product8.jpg" alt="">
+							<span class="products__see-more"></span>
+						</a>
+						<span class="products__name">Изделия из камня для экстерьера</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section promo promo--metering">
+		<div class="container">
+			<h1 class="title">Замеры <br>в подарок</h1>
+			<p class="promo__text">при заключении договора на изготовление <br>
+				художественных изделий из натурального камня</p>
+			<p class="promo__form-info">
+				Запишитесь на замеры – оставьте свой номер телефона,
+				руководитель проектов <br>свяжется с Вами для подбора удобного для Вас
+				времени проведения замеров
+			</p>
+			<form action="">
+				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="text" class="input-text" placeholder="Ваш город">
+				<input type="submit" class="btn--square" value="Отправить">
+			</form>
+		</div>
+	</div>
+
 	<div class="section">Some section 4</div>
 	<div class="section">Some section 5</div>
 	<div class="section">Some section 6</div>
-	<div class="section">Some section 7</div>
+
+	<div class="section rocks">
+		<div class="container container--smallpadding">
+			<h1 class="title title--dark title--small">Породы</h1>
+			<div class="container__inner">
+				<div class="row">
+					<div class="col-3">
+						<img src="img/rock1.jpg" class="products__image" alt="">
+						<span class="products__name">Самоцветы</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock2.jpg" class="products__image" alt="">
+						<span class="products__name">Мрамор</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock3.jpg" class="products__image" alt="">
+						<span class="products__name">Гранит</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock4.jpg" class="products__image" alt="">
+						<span class="products__name">Оникс</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+						<img src="img/rock5.jpg" class="products__image" alt="">
+						<span class="products__name">Кварцит</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock6.jpg" class="products__image" alt="">
+						<span class="products__name">Сланец</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock7.jpg" class="products__image" alt="">
+						<span class="products__name">Известняк</span>
+					</div>
+					<div class="col-3">
+						<img src="img/rock8.jpg" class="products__image" alt="">
+						<span class="products__name">Травертин</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section promo promo--catalog">
+		<div class="container">
+			<h1 class="title">Полный каталог <br>натурального камня</h1>
+			<p class="promo__text">Мы работаем напрямую с основными <br>
+				карьерами мира</p>
+			<p class="promo__form-info">
+				Чтобы получить полный каталог натурального камня, оставьте свои данные <br>
+				и наш специалист свяжется с вами и отправит каталог на Email
+			</p>
+			<form action="">
+				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="text" class="input-text" placeholder="Ваш город">
+				<input type="submit" class="btn--square" value="Отправить">
+			</form>
+		</div>
+	</div>
 </div>
 
 
 <script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/scrolloverflow.min.js"></script>
 <script src="js/vendor/jquery.fullpage.js"></script>
 <script src="js/vendor/jquery.magnific-popup.js"></script>
 <script src="js/main.js"></script>
