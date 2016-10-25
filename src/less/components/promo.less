@@ -8,6 +8,10 @@
 		color: @color__white;
 		font-size: @font-size--large;
 		margin-bottom: 1.2em;
+
+		&--dark {
+			color: @text-color;
+		}
 	}
 
 	&__form-info {
@@ -17,9 +21,21 @@
 		font-weight: 300;
 		line-height: 1.6em;
 		margin-bottom: 2.4em;
+
+		&--dark {
+			color: @text-color;
+		}
+
 		.media-full({
 			font-size: @font-size--small;
 		});
+	}
+
+	&__image {
+		width: 53rem;
+		height: 16rem;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 	
 	&--sketch {
@@ -32,6 +48,28 @@
 	
 	&--catalog {
 		background-image: url(../img/bg_catalog.jpg);
+	}
+}
+
+.rok {
+	background-image: url(../img/bg_map.png);
+	background-position: 155% 100%;
+	background-size: 65%;
+	background-repeat: no-repeat;
+
+	.media-xl({
+		background-size:70%;
+		background-position: 185% 90%;
+	});
+
+	.promo__image {
+		background-image: url(../img/rok.jpg);
+	}
+}
+
+.projects {
+	.container__inner {
+		top: 13.2rem;
 	}
 }
 

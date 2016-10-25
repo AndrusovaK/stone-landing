@@ -1,0 +1,9 @@
+@amount: 6;
+
+.slidesLoop(@index) when (@index < @amount) {
+	&.slider__content@{index} .slider__img{
+		background-image: url('../img/project@{index}.jpg');
+	}
+
+	.slidesLoop(@index + 1);
+}

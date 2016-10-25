@@ -1,5 +1,10 @@
 .container {
-	padding: 8rem 13.75rem 0rem 34rem;
+	padding: 8rem 6rem 0rem 28rem;
+
+	.media-lg({
+		padding-left: 34rem;
+		padding-right: 13.75rem;
+	});
 
 	&--smallpadding {
 		padding-top: 2.2rem;
@@ -9,8 +14,13 @@
 		position: absolute;
 		top: 11.2rem;
 		bottom: 3.4rem;
-		left: 34rem;
-		right: 13.75rem;
+		left: 28rem;
+		right: 6rem;
+
+		.media-lg({
+			left: 34rem;
+			right: 13.75rem;
+		});
 	}
 }
 
