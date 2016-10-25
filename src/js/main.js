@@ -17,6 +17,7 @@ $(document).ready(function() {
 		infinite: false
 	});
 
+	// Image popup
 	$('.slider__content').magnificPopup({
 		type: 'image',
 		mainClass: 'mfp-fade',
