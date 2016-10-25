@@ -19,6 +19,7 @@
     "gulp-csscomb": "^3.0.6",
     "gulp-filter": "^3.0.1",
     "gulp-imagemin": "^2.3.0",
+    "gulp-gh-pages": "^0.5.2",
     "gulp-jshint": "^1.11.2",
     "gulp-less": "^3.0.5",
     "gulp-less-reporter": "0.0.2",

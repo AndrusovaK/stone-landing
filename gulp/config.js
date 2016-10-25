@@ -7,7 +7,7 @@ module.exports = {
                 MainHtmlFile: 'src/index.html',
                 Images: ['src/img/**/*.*', '!src/img/sprite/*.*'],
                 // PngSprite: 'src/img/sprite/**/*.png',
-                // GHPages: 'dist/**/*',
+                GHPages: 'dist/**/*',
                 JS: 'src/js/**/*.*',
                 JSVendor: 'vendor/**/*.*',
                 BowerJSVendor: 'src/js/vendor/',
@@ -41,9 +41,9 @@ module.exports = {
         },
 
     // GitHub Pages options
-   /* ghpOptions: {
-        remoteUrl: "git@github.com:AndrusovaK/travel-site.git"
-    },*/
+    ghpOptions: {
+        remoteUrl: "git@github.com:AndrusovaK/stone-landing.git"
+    },
 
     // jsDoc3 options for JS documentation generating
     // jsDocOptions:"./node_modules/jsdoc/jsdoc.js -c ./jsdoc-conf.json -r",
