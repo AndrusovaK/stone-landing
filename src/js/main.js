@@ -17,5 +17,11 @@ $(document).ready(function() {
 		infinite: false
 	});
 
+	$('.slider__content').magnificPopup({
+		type: 'image',
+		mainClass: 'mfp-fade',
+		removalDelay: 300
+	});
+
 
 });
