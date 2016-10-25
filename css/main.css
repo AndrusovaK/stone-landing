@@ -701,9 +701,6 @@ textarea {
 .rok .promo__image {
     background-image : url(../img/rok.jpg);
 }
-.projects .container__inner {
-    top : 13.2rem;
-}
 .title {
     font-size : 5.25rem;
     line-height : 1.1em;
@@ -943,4 +940,34 @@ textarea {
 }
 .slider-nav__next.slick-disabled {
     background-image : url(../img/arrow-right-disabled.png);
+}
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity : 0;
+
+    -webkit-transition : all .15s ease-out;
+            transition : all .15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity : .8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity : 0;
+}
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity : 0;
+
+    -webkit-transition : all .15s ease-out;
+            transition : all .15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity : 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity : 0;
 }
