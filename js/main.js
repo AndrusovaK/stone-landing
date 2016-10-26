@@ -17,11 +17,28 @@ $(document).ready(function() {
 		infinite: false
 	});
 
+	$('.services__slider').slick({
+		prevArrow: $('.services__prev'),
+		nextArrow: $('.services__next'),
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: false
+	});
+
+	// Image popup
 	$('.slider__content').magnificPopup({
 		type: 'image',
 		mainClass: 'mfp-fade',
 		removalDelay: 300
 	});
+
+	$('.rocks__image').magnificPopup({
+		type: 'image',
+		mainClass: 'mfp-fade',
+		removalDelay: 300
+	});
+
+
 
 
 });

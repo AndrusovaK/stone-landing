@@ -176,8 +176,8 @@ td, th {
     white-space : nowrap;
 
     background-color : transparent;
-    border : 1px solid #eeb662;
-    border-radius : 2rem / 2rem;
+    border : 2px solid #eeb662;
+    border-radius : 2.8rem / 2.8rem;
     cursor : pointer;
 
     -webkit-transition : all .3s;
@@ -217,8 +217,8 @@ td, th {
 
     background-color : transparent;
     background-color : #eeb662;
-    border : 1px solid #eeb662;
-    border-radius : 2rem / 2rem;
+    border : 2px solid #eeb662;
+    border-radius : 2.8rem / 2.8rem;
     border-radius : 3px;
     cursor : pointer;
 
@@ -237,6 +237,9 @@ td, th {
 }
 .btn--square:active {
     background : #eeb662;
+}
+.btn--square:hover {
+    background-color : transparent;
 }
 @media (min-width: 1890px) {
     .btn--square {
@@ -263,6 +266,13 @@ td, th {
 
     font-family : "Sf UI Display";
     src : url("fonts/sf-ui-display-regular-webfont.woff2") format("woff2"), url("fonts/sf-ui-display-regular-webfont.woff") format("woff"), url("fonts/sf-ui-display-regular-webfont.ttf") format("truetype");
+}
+@font-face {
+    font-weight : 100;
+    font-style : normal;
+
+    font-family : "Sf UI Display";
+    src : url("fonts/sfuidisplay-ultralight_0-webfont.woff2") format("woff2"), url("fonts/sfuidisplay-ultralight_0-webfont.woff") format("woff"), url("fonts/sfuidisplay-ultralight_0-webfont.ttf") format("truetype");
 }
 @font-face {
     font-weight : 900;
@@ -315,11 +325,10 @@ a, button, [role="button"], input, label, select, textarea {
         touch-action : manipulation;
 }
 html input[type=submit] {
-    border : 0;
     outline : 0;
 }
 .container {
-    padding : 8rem 6rem 0rem 28rem;
+    padding : 8rem 6rem 2rem 28rem;
 }
 @media (min-width: 1280px) {
     .container {
@@ -405,7 +414,7 @@ h4 {
     font-size : 1.9rem;
 }
 h5 {
-    font-size : 1.2rem;
+    font-size : 1.5rem;
 }
 h6 {
     font-size : 1rem;
@@ -617,6 +626,9 @@ textarea {
 .aside__contacts .btn--callback {
     margin-top : 2rem;
 }
+.main-nav {
+    padding-top : 13rem;
+}
 .main-nav__list {
     padding-left : 0;
 
@@ -643,6 +655,8 @@ textarea {
     font-size : 1.5rem;
 }
 .section {
+    overflow : hidden;
+
     background-size : cover;
 }
 .promo__text {
@@ -700,6 +714,80 @@ textarea {
 }
 .rok .promo__image {
     background-image : url(../img/rok.jpg);
+}
+.rocks__image {
+    position : relative;
+
+    display : block;
+    width : 100%;
+}
+.rocks__name {
+    display : block;
+    margin-top : 1em;
+
+    line-height : 1.1em;
+}
+.rocks__zoom {
+    position : absolute;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+}
+.rocks__zoom:before {
+    content : "";
+    position : absolute;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    z-index : 10;
+
+    width : 4.25rem;
+    height : 4.25rem;
+    margin : auto auto;
+
+    background : url(../img/icon_zoom.png) no-repeat 50% 50%;
+    background-size : contain;
+    -webkit-transform : scale(.8);
+        -ms-transform : scale(.8);
+            transform : scale(.8);
+    opacity : 0;
+
+    -webkit-transition : .4s ease;
+            transition : .4s ease;
+}
+.rocks__zoom:hover:before {
+    -webkit-transform : scale(1);
+        -ms-transform : scale(1);
+            transform : scale(1);
+    opacity : 1;
+}
+.rocks__zoom:after {
+    content : "";
+    position : absolute;
+    top : 50%;
+    left : 50%;
+
+    width : 0;
+    height : 0;
+
+    background : #eeb662;
+    border-radius : 1000px;
+    opacity : 0;
+
+    -webkit-transition : .4s ease;
+            transition : .4s ease;
+}
+.rocks__zoom:hover:after {
+    top : 0;
+    left : 0;
+
+    width : 100%;
+    height : 100%;
+
+    border-radius : 0;
+    opacity : .9;
 }
 .title {
     font-size : 5.25rem;
@@ -918,9 +1006,15 @@ textarea {
     height : 8rem;
 
     cursor : pointer;
+
+    -webkit-transition : all .3s;
+            transition : all .3s;
+}
+.slider-nav__prev:hover, .slider-nav__next:hover {
+    opacity : .7;
 }
 .slider-nav__prev {
-    left : -9rem;
+    left : -5.5rem;
 
     background-image : url(../img/arrow-left.png);
     background-repeat : no-repeat;
@@ -930,8 +1024,16 @@ textarea {
 .slider-nav__prev.slick-disabled {
     background-image : url(../img/arrow-left-disabled.png);
 }
+.slider-nav__prev.slick-disabled:hover {
+    opacity : 1;
+}
+@media (min-width: 1280px) {
+    .slider-nav__prev {
+        left : -9rem;
+    }
+}
 .slider-nav__next {
-    right : -9rem;
+    right : -5.5rem;
 
     background-image : url(../img/arrow-right.png);
     background-repeat : no-repeat;
@@ -940,6 +1042,14 @@ textarea {
 }
 .slider-nav__next.slick-disabled {
     background-image : url(../img/arrow-right-disabled.png);
+}
+.slider-nav__next.slick-disabled:hover {
+    opacity : 1;
+}
+@media (min-width: 1280px) {
+    .slider-nav__next {
+        right : -9rem;
+    }
 }
 /* overlay at start */
 .mfp-fade.mfp-bg {
@@ -975,5 +1085,82 @@ textarea {
     cursor : default;
 }
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    top : 10px;
+    right : -55px;
+
+    font-weight : 100;
+    font-size : 65px;
+
     cursor : pointer;
+
+    font-family : "Sf UI Display", sans-serif;
+}
+.mfp-figure:before {
+    content : "";
+    position : absolute;
+    top : 56px;
+    right : -18px;
+    bottom : 22px;
+    z-index : -1;
+
+    width : 100%;
+
+    border : 1px solid #eeb662;
+}
+.service {
+    margin-right : 2.5rem;
+
+    font-size : 1.2rem;
+}
+@media (min-width: 1440px) {
+    .service {
+        font-size : 1rem;
+    }
+}
+.service__image {
+    width : 100%;
+    max-height : 16.25rem;
+    overflow : hidden;
+}
+.service__image img {
+    width : 100%;
+    height : auto;
+}
+.service__title {
+    margin : 1em 0;
+
+    font-weight : 400;
+    font-size : 1.9rem;
+    line-height : 1.3em;
+    color : #1e1e1e;
+
+    font-family : "Sf UI Display", sans-serif;
+}
+@media (min-width: 1890px) {
+    .service__title {
+        font-size : 1.5rem;
+    }
+}
+.service__text {
+    max-height : 12em;
+    margin-bottom : 1.4em;
+    padding-right : 3rem;
+    overflow : hidden;
+
+    line-height : 1.5em;
+}
+@media (min-width: 1440px) {
+    .service__text {
+        max-height : 22em;
+    }
+}
+.service__see-more {
+    font-weight : 700;
+    color : #eeb662;
+
+    -webkit-transition : all .3s;
+            transition : all .3s;
+}
+.service__see-more:hover {
+    color : #e9a134;
 }
