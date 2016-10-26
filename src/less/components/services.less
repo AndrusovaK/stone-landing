@@ -1,0 +1,50 @@
+.service {
+	font-size: @font-size--medium;
+	margin-right: 2.5rem;
+
+	.media-xl({
+		font-size: @font-size--small;
+	});
+
+	&__image {
+		width: 100%;
+		max-height: 16.25rem;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__title {
+		.h4();
+		font-family: "Sf UI Display", sans-serif;
+		font-weight: 400;
+		margin: 1em 0;
+
+		.media-full({font-size: @font-size--h5;});
+	}
+
+	&__text {
+		line-height: 1.5em;
+		padding-right: 3rem;
+		margin-bottom: 1.4em;
+		max-height: 12em;
+		overflow: hidden;
+
+		.media-xl({
+			max-height: 22em;
+		});
+	}
+
+	&__see-more {
+		color: @color__gold;
+		font-weight: 700;
+		transition: all 0.3s;
+
+		&:hover {
+			color: darken(@color__gold, 10%);
+		}
+	}
+}

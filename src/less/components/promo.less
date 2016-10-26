@@ -68,6 +68,74 @@
 	}
 }
 
+.rocks {
+
+	&__image {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	&__name {
+		display: block;
+		margin-top: 1em;
+		line-height: 1.1em;
+	}
+
+	&__zoom {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 4.25rem;
+			height: 4.25rem;
+			right: 0;
+			left: 0;
+			margin: auto auto;
+			background: url(../img/icon_zoom.png) no-repeat 50% 50%;
+			background-size: contain;
+			z-index: 10;
+			transform: scale(.8);
+			opacity: 0;
+			transition: .4s ease;
+		}
+
+		&:hover:before {
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 0;
+			height: 0;
+			background: @color__gold;
+			border-radius: 1000px;
+			opacity: 0;
+			transition: .4s ease;
+		}
+
+		&:hover:after {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+			opacity: .9;
+		}
+	}
+}
+
 .title {
 	.h1();
 	color: @color__white;
