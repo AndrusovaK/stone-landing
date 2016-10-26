@@ -1,0 +1,100 @@
+.map {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	&__balloon {
+		position: relative;
+		padding: 2.5rem;
+		width: 15em;
+		font-size: @font-size--medium;
+		background: #fff;
+		box-shadow: 0 20px 40px rgba(40, 40, 40, 0.5);
+		z-index: 600;
+	}
+
+	&__balloon-wrapper {
+		position: relative;
+	}
+
+	&__balloon-title {
+		display: block;
+		font-weight: 700;
+		margin-bottom: 1em;
+	}
+
+	&__balloon-address {
+		margin-bottom: 0;
+		line-height: 1.5em;
+	}
+
+	&__balloon-triangle {
+		height: 40px;
+		width: 40px;
+		position: relative;
+		left: 3.75rem;
+		overflow: hidden;
+		box-shadow: -11px -2px 31px -13px rgba(0, 0, 0, .5);
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: 56.5px;
+			height: 56.5px;
+			background: #fff;
+			transform: rotate(45deg);
+			top: -28px;
+			left: -28px;
+			box-shadow: 0px -1px 24px -6px rgba(0, 0, 0, 0.5);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 56.5px;
+			height: 56.5px;
+			background: #fff;
+			transform: rotate(45deg);
+			top: -28px;
+			left: -28px;
+			z-index: 800;
+		}
+	}
+}
+
+
+.contacts {
+	.container {
+		position: relative;
+		z-index: 900;
+		height: 100%;
+	}
+
+	&__inner {
+		position: absolute;
+		bottom: 8rem;
+		left: 28rem;
+
+		.media-lg({ left: 34rem;});
+	}
+
+	.phone {
+		color: @text-color;
+	}
+
+	.phone:first-of-type {
+		font-size: 2.25rem;
+		span {
+			font-size: 3.75rem;
+			font-weight: 700;
+		}
+	}
+
+	.phone:last-of-type {
+		font-size: @font-size;
+		span {
+			font-size: 2.25rem;
+			font-weight: 700;
+		}
+	}
+}
