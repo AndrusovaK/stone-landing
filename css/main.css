@@ -1164,3 +1164,108 @@ textarea {
 .service__see-more:hover {
     color : #e9a134;
 }
+.map {
+    position : absolute;
+
+    width : 100%;
+    height : 100%;
+}
+.map__balloon {
+    position : relative;
+    z-index : 600;
+
+    width : 15em;
+    padding : 2.5rem;
+
+    font-size : 1.2rem;
+
+    background : #fff;
+    box-shadow : 0 20px 40px rgba(40, 40, 40, .5);
+}
+.map__balloon-wrapper {
+    position : relative;
+}
+.map__balloon-title {
+    display : block;
+    margin-bottom : 1em;
+
+    font-weight : 700;
+}
+.map__balloon-address {
+    margin-bottom : 0;
+
+    line-height : 1.5em;
+}
+.map__balloon-triangle {
+    position : relative;
+    left : 3.75rem;
+
+    width : 40px;
+    height : 40px;
+    overflow : hidden;
+
+    box-shadow : -11px -2px 31px -13px rgba(0, 0, 0, .5);
+}
+.map__balloon-triangle:after {
+    content : "";
+    position : absolute;
+    top : -28px;
+    left : -28px;
+
+    width : 56.5px;
+    height : 56.5px;
+
+    background : #fff;
+    box-shadow : 0 -1px 24px -6px rgba(0, 0, 0, .5);
+    -webkit-transform : rotate(45deg);
+        -ms-transform : rotate(45deg);
+            transform : rotate(45deg);
+}
+.map__balloon-triangle:before {
+    content : "";
+    position : absolute;
+    top : -28px;
+    left : -28px;
+    z-index : 800;
+
+    width : 56.5px;
+    height : 56.5px;
+
+    background : #fff;
+    -webkit-transform : rotate(45deg);
+        -ms-transform : rotate(45deg);
+            transform : rotate(45deg);
+}
+.contacts .container {
+    position : relative;
+    z-index : 900;
+
+    height : 100%;
+}
+.contacts__inner {
+    position : absolute;
+    bottom : 8rem;
+    left : 28rem;
+}
+@media (min-width: 1280px) {
+    .contacts__inner {
+        left : 34rem;
+    }
+}
+.contacts .phone {
+    color : #1e1e1e;
+}
+.contacts .phone:first-of-type {
+    font-size : 2.25rem;
+}
+.contacts .phone:first-of-type span {
+    font-weight : 700;
+    font-size : 3.75rem;
+}
+.contacts .phone:last-of-type {
+    font-size : 1.5rem;
+}
+.contacts .phone:last-of-type span {
+    font-weight : 700;
+    font-size : 2.25rem;
+}
