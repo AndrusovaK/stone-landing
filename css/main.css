@@ -626,6 +626,20 @@ textarea {
 .aside__contacts .btn--callback {
     margin-top : 2rem;
 }
+.aside .contacts-hidden.hide {
+    position : relative;
+    z-index : -5;
+
+    height : 1px;
+
+    opacity : 0;
+}
+.aside .arrow-up:hover {
+    opacity : .9;
+}
+.aside .arrow-up.hidden {
+    display : none;
+}
 .main-nav {
     padding-top : 13rem;
 }
@@ -1084,7 +1098,7 @@ textarea {
 .mfp-zoom-out-cur {
     cursor : default;
 }
-.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close, .mfp-close-btn-in .mfp-close {
     top : 10px;
     right : -55px;
 
@@ -1094,6 +1108,13 @@ textarea {
     cursor : pointer;
 
     font-family : "Sf UI Display", sans-serif;
+}
+.mfp-close-btn-in .mfp-close {
+    top : 0;
+    right : 0;
+
+    font-size : 100px;
+    color : #fff;
 }
 .mfp-figure:before {
     content : "";
@@ -1106,6 +1127,75 @@ textarea {
     width : 100%;
 
     border : 1px solid #eeb662;
+}
+.popup {
+    position : relative;
+
+    box-sizing : border-box;
+    width : auto;
+    max-width : 476px;
+    margin : 20px auto;
+    padding : 56px 52px 0;
+
+    font-size : 16px;
+    color : #1e1e1e;
+
+    background : transparent;
+}
+.popup__inner {
+    padding : 40px;
+
+    background : #fff;
+}
+.popup__title {
+    margin-bottom : 15px;
+
+    font-size : 48px;
+    line-height : 1em;
+}
+.popup__text {
+    line-height : 24px;
+}
+.popup .input-text {
+    width : 100%;
+    margin-right : 0;
+    margin-bottom : 20px;
+    padding : 17px 20px;
+
+    font-size : 16px;
+    color : #1e1e1e;
+
+    border-color : #dcdcdc;
+}
+.popup .input-text::-webkit-input-placeholder {
+    font-weight : 300;
+    color : #1e1e1e;
+
+    opacity : 1;
+}
+.popup .input-text::-moz-placeholder {
+    font-weight : 300;
+    color : #1e1e1e;
+
+    opacity : 1;
+}
+.popup .input-text:-ms-input-placeholder {
+    font-weight : 300;
+    color : #1e1e1e;
+
+    opacity : 1;
+}
+.popup .input-text::placeholder {
+    font-weight : 300;
+    color : #1e1e1e;
+
+    opacity : 1;
+}
+.popup .btn--square {
+    width : 100%;
+}
+.popup .btn--square:hover {
+    background-color : #f0c179;
 }
 .service {
     margin-right : 2.5rem;

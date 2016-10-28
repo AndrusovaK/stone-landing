@@ -4,7 +4,21 @@ $(document).ready(function() {
 	$('#fullpage').fullpage({
 		anchors: ['top', 'products', '', 'projects', 'rok', 'services', 'rocks', '', 'contacts'],
 		menu: '#nav',
-		scrollOverflow:true
+		scrollOverflow:true,
+		onLeave: function (index, nextIndex, direction) {
+			var numberOfSections = $('#fullpage .section').length;
+			var contacts = $('.contacts-hidden');
+			var arrowUp = $('.arrow-up');
+			if(nextIndex === numberOfSections && direction =='down') {
+				console.log('last section');
+				contacts.addClass('hide');
+				arrowUp.removeClass('hidden');
+			} else if (index === numberOfSections && direction == 'up') {
+				console.log('leave last section');
+				contacts.removeClass('hide');
+				arrowUp.addClass('hidden');
+			}
+		}
 	});
 
 	//Slider initialization
@@ -37,8 +51,17 @@ $(document).ready(function() {
 		mainClass: 'mfp-fade',
 		removalDelay: 300
 	});
+
+	$('.callback-link').magnificPopup({
+		type: 'inline',
+		midClick: true,
+		mainClass: 'mfp-fade',
+		removalDelay: 300
+	});
 });
 
+
+// Яндекс карта
 ymaps.ready(init);
 
 function init() {
@@ -52,7 +75,7 @@ function init() {
 			'<div class="map__balloon-wrapper">' +
 			'<div class="map__balloon">' +
 			'<span class="map__balloon-title">Головной офис</span>' +
-			'<p class="map__balloon-address">г.Санкт-Петербург, <br>' +
+			'<p class="map__balloon-address">г. Санкт-Петербург, <br>' +
 			'Камчатская улица, д. 13А</p>' +
 			'</div>' +
 			'<div class="map__balloon-triangle"></div>' +
