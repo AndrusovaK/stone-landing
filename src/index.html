@@ -30,9 +30,13 @@
 	</div>
 	<div class="aside__contacts">
 		<div class="aside__contacts-inner">
-			<div class="phone">+7 (812) <span>425 39 00</span></div>
-			<div class="phone">+7 (812) <span>425 39 00</span></div>
-			<a href="" class="btn btn--transparent btn--callback">Перезвоните мне</a>
+			<div class="contacts-hidden">
+				<div class="phone">+7 (812) <span>425 39 00</span></div>
+				<div class="phone">+7 (812) <span>425 39 00</span></div>
+				<a href="#callback-popup" class="btn btn--transparent btn--callback callback-link">Перезвоните мне</a>
+			</div>
+
+			<a href="#top" class="arrow-up hidden"><img src="img/icon_arrow-up.png" alt="arrow-up"></a>
 		</div>
 	</div>
 </div>
@@ -372,6 +376,22 @@
 		<div class="contacts__inner">
 			<div class="phone">+7 (812) <span>425 39 00</span></div>
 			<div class="phone">+7 (812) <span>425 39 00</span></div>
+		</div>
+	</div>
+</div>
+
+<div id="callback-popup" class="mfp-hide popup">
+	<div class="popup__inner clearfix">
+		<span class="popup__icon popup__icon--offer"></span>
+		<div class="popup__title">Обратный звонок</div>
+		<p class="popup__text">Заполните форму и мы перезвоним Вам в ближайшее время
+		</p>
+		<div class="popup__form">
+			<form action="">
+				<input type="text" class="input-text" placeholder="Ваше ФИО">
+				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="submit" class="btn--square" value="Готово">
+			</form>
 		</div>
 	</div>
 </div>
