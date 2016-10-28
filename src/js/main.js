@@ -18,6 +18,13 @@ $(document).ready(function() {
 				contacts.removeClass('hide');
 				arrowUp.addClass('hidden');
 			}
+		}, 
+		afterRender: function () {
+			$('.container__inner').removeClass('hide');
+			$('.contacts__inner').removeClass('hide');
+		},
+		afterResize: function () {
+			map.container.fitToViewport();
 		}
 	});
 
@@ -63,9 +70,10 @@ $(document).ready(function() {
 
 // Яндекс карта
 ymaps.ready(init);
+var map;
 
 function init() {
-	var map = new ymaps.Map('map', {
+	map = new ymaps.Map('map', {
 		center: [59.900946, 30.353367],
 		zoom: 17,
 		controls: []
