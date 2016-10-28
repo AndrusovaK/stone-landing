@@ -321,6 +321,8 @@ img {
     cursor : pointer;
 }
 a, button, [role="button"], input, label, select, textarea {
+    outline : none;
+
     -ms-touch-action : manipulation;
         touch-action : manipulation;
 }
@@ -345,6 +347,11 @@ html input[type=submit] {
     right : 6rem;
     bottom : 3.4rem;
     left : 28rem;
+}
+.container__inner.hide {
+    height : 0;
+
+    opacity : 0;
 }
 @media (min-width: 1280px) {
     .container__inner {
@@ -1341,6 +1348,11 @@ textarea {
     .contacts__inner {
         left : 34rem;
     }
+}
+.contacts__inner.hide {
+    height : 0;
+
+    opacity : 0;
 }
 .contacts .phone {
     color : #1e1e1e;
