@@ -1336,8 +1336,6 @@ textarea {
 .contacts .container {
     position : relative;
     z-index : 900;
-
-    height : 100%;
 }
 .contacts__inner {
     position : absolute;
