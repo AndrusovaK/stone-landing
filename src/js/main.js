@@ -4,7 +4,9 @@ $(document).ready(function() {
 	$('#fullpage').fullpage({
 		anchors: ['top', 'products', '', 'projects', 'rok', 'services', 'rocks', '', 'contacts'],
 		menu: '#nav',
-		scrollOverflow:true,
+		scrollOverflow: true,
+		slidesNavigation: false,
+		controlArrows: false,
 		onLeave: function (index, nextIndex, direction) {
 			var numberOfSections = $('#fullpage .section').length;
 			var contacts = $('.contacts-hidden');
