@@ -1274,6 +1274,7 @@ textarea {
 .popup--product {
     width : 824px;
     max-width : 824px;
+    padding-top : 40px;
 }
 .popup--product .popup__title {
     margin-bottom : 36px;
