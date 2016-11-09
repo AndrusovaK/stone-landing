@@ -70,34 +70,135 @@ $(document).ready(function() {
 
 	function goToCategory(e) {
 		var currentCategory = $(e.currentTarget).closest('.product-category');
-		var targetCategoryIndex = $(e.currentTarget).attr('data-category') || 'home';
+		var targetCategoryIndex = $(e.currentTarget).attr('data-category');
 		var targetCategory = $('#category-' + targetCategoryIndex);
-		var allCategories = $('.product-category');
+
 
 		targetCategory.addClass('top');
 		currentCategory.animate(
 				{
 					'left': '-' + currentCategory.outerWidth() + 'px',
 					'right': currentCategory.outerWidth() + 'px'
-				}, 800, 'swing',
-				function () {
-					currentCategory.removeClass('active').css({left: 0, right: 0});
-					targetCategory.addClass('active');
-					allCategories.removeClass('top');
-				}
+				}, 800, 'swing'
 		);
 	}
 
 	$('.product-link').on('click', function(e) {
 		e.preventDefault();
-		console.log(e);
 		goToCategory(e);
 	});
 
 	$('.go-home-link').on('click', function (e) {
 		e.preventDefault();
-		goToCategory(e);
-	})
+		var allCategories = $('.product-category');
+		$('#category-home').animate({
+				'left': '0px',
+				'right': '0px'
+			}, 800, 'swing', function () {
+			allCategories.removeClass('top');
+			}
+		);
+	});
+
+
+	// POPUPS
+
+	var productsData = [
+		{
+			id: 'product1',
+			productName: 'Брусчатка',
+			description: 'Мы объединили более 20 производственных площадок ' +
+			'в 5 регионах России и распределяем на них заказы от типовой облицовочной ' +
+			'продукции до эксклюзивных высокохудожественных изделий в зависимости от ' +
+			'профиля завода.',
+			photoUrl_img: 'img/product-details/product-detail1.jpg',
+		}
+	];
+
+	// пригодится для пхп
+	/*var addEventListenerToForms = function () {
+		$('.js-form').on('submit', function (e) {
+			e.preventDefault();
+
+			var form = $(this);
+			form.find(':submit').removeAttr('disabled');
+
+			var params = {};
+
+			params.phone = form.find('input[name="phone"]').val();
+			params.formName = form.attr('data-source');
+
+			if(form.find('input[name="email"]').val()) {
+				params.email = form.find('input[name="email"]').val();
+			}
+
+			$.ajax({
+				type: "POST",
+				dataType: 'json',
+				url: $(form).attr('action'),
+				data: params,
+				beforeSend: function(data) { // сoбытиe дo oтпрaвки
+					form.find('input[type="submit"]').attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
+				},
+				success: function (data) {
+					if (data.SUCCESS == 'Y') {
+						$.magnificPopup.open({
+							key: 'success-popup',
+							items: {
+								src: '#success-send-popup',
+								type: 'inline'
+							},
+							mainClass: 'mfp-fade',
+							removalDelay: 300
+						});
+
+						form.find('input[name="phone"]').val(null);
+						form.find('input[name="email"]').val(null);
+
+						setTimeout(autoClosePopup, 2000);
+
+					} else {
+						if(data.ERROR !== ""){
+							openErrorPopup();
+						}
+					}
+					form.find(':submit').removeAttr('disabled');
+				},
+				error: function (data) {
+					openErrorPopup();
+				}
+			});
+		});
+	};*/
+
+	function openProductModal (event) {
+		$('.js-form').off('submit');
+
+		var productInfo = productsData.filter(function (elem) {
+			return elem.id === event.currentTarget.getAttribute('data-id');
+		});
+
+		var popupMarkup = $('#product-popup-markup').html();
+
+		$.magnificPopup.open({
+			items: productInfo,
+			type: 'inline',
+			inline: {
+				markup: popupMarkup
+			},
+			mainClass: 'mfp-fade',
+			removalDelay: 300,
+			fixedContentPos: true,
+			fixedBgPos: true
+		});
+
+		//addEventListenerToForms();
+
+		// prevent click handler for touch screens
+		event.preventDefault();
+	}
+
+	$('.detailed-product').on('click', openProductModal);
 });
 
 

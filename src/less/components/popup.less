@@ -111,4 +111,71 @@
 			background-color: lighten(@color__gold, 5%);
 		}
 	}
+
+	&--product {
+		width: 824px;
+		max-width: 824px;
+
+		.popup__title {
+			font-family: 'GothamPro', sans-serif;
+			font-weight: 300;
+			margin-bottom: 36px;
+		}
+
+		.popup__image {
+			float: left;
+			width: 240px;
+			margin-right: 20px;
+		}
+		
+		.popup__product-description {
+			float: left;
+			width: 375px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		.popup__form {
+			height: 240px;
+			background: #000000;
+			color: #fff;
+			padding: 40px;
+		}
+
+		.popup__form-inner {
+			float: left;
+		}
+
+		.js-form {
+			float: right;
+			width: 320px;
+		}
+
+		.popup__form-title {
+			font-size:30px;
+			color: #fff;
+			margin-bottom: 18px;
+		}
+
+		.popup__form-text {
+			line-height: 24px;
+			font-size: 16px;
+		}
+
+		.input-text {
+			border-color: @color__gold;
+			color: #fff;
+
+			&::placeholder {
+				color: @color__white;
+				font-weight: 300;
+				opacity: 1;
+			}
+		}
+
+		.btn--square {
+			font-size: 22px;
+			padding: 30px;
+		}
+	}
 }

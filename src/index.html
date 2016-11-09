@@ -60,7 +60,7 @@
 
 	<div class="section products">
 
-		<div class="product-category container container--smallpadding active" id="category-home">
+		<div class="product-category container container--smallpadding" id="category-home">
 			<h2 class="title title--dark title--small">Изделия</h2>
 			<div class="container__inner hide">
 				<div class="row">
@@ -132,28 +132,28 @@
 			</h3>
 			<div class="container__inner container__inner--smalltop hide">
 				<div class="row">
-					<div class="col-3">
+					<div class="col-3 detailed-product" data-id="product1">
 						<a href="" class="products__image">
 							<img src="img/temporary-image.jpg"  alt="">
 							<span class="products__see-more"></span>
 						</a>
 						<span class="products__name">Мозайка</span>
 					</div>
-					<div class="col-3">
+					<div class="col-3 detailed-product" data-id="product1">
 						<a href="" class="products__image">
 							<img src="img/temporary-image.jpg"  alt="">
 							<span class="products__see-more"></span>
 						</a>
 						<span class="products__name">Камины</span>
 					</div>
-					<div class="col-3">
+					<div class="col-3 detailed-product" data-id="product1">
 						<a href="" class="products__image">
 							<img src="img/temporary-image.jpg"  alt="">
 							<span class="products__see-more"></span>
 						</a>
 						<span class="products__name">Отделка интерьеров</span>
 					</div>
-					<div class="col-3">
+					<div class="col-3 detailed-product" data-id="product1">
 						<a href="" class="products__image">
 							<img src="img/temporary-image.jpg"  alt="">
 							<span class="products__see-more"></span>
@@ -162,7 +162,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-3">
+					<div class="col-3 detailed-product" data-id="product1">
 						<a href="" class="products__image">
 							<img src="img/temporary-image.jpg" alt="">
 							<span class="products__see-more"></span>
@@ -490,6 +490,36 @@
 			</form>
 		</div>
 	</div>
+</div>
+<div id="product-popup-markup" style="display: none;" >
+	<div class="popup popup--product">
+		<div class="mfp-close"></div>
+		<div class="popup__inner">
+
+			<div class="popup__title mfp-productName"></div>
+
+			<div class="clearfix">
+				<div class="popup__image">
+					<div class="mfp-photoUrl"></div>
+				</div>
+
+				<div class="popup__product-description mfp-description"></div>
+			</div>
+
+
+		</div>
+		<div class="popup__form clearfix">
+			<div class="popup__form-inner">
+				<p class="popup__form-title">Оставьте ваш <br> номер телефона</p>
+				<p class="popup__form-text">и наш менеджер свяжется с вами и <br> даст подробную консультацию!</p>
+			</div>
+			<form action="" class="js-form">
+				<input type="text" class="input-text" placeholder="Ваш номер телефона">
+				<input type="submit" class="btn--square" value="Отправить">
+			</form>
+		</div>
+	</div>
+
 </div>
 
 
